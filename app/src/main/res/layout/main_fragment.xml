@@ -2,8 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@android:color/background_light">
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
+
+    <data>
+
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,13 +20,14 @@
             layout="@layout/total_cases"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.0"/>
+            android:layout_weight="1.0" />
+
         <include
             android:id="@+id/total_deaths_ll"
             layout="@layout/total_death"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.0"/>
+            android:layout_weight="1.0" />
 
     </LinearLayout>
 
@@ -37,7 +42,7 @@
             layout="@layout/total_cured"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.0"/>
+            android:layout_weight="1.0" />
 
         <include
             android:id="@+id/stay_home_ll"
