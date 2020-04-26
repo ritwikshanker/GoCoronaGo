@@ -1,13 +1,19 @@
 package com.example.gocoronago.ui.main
 
-import androidx.lifecycle.ViewModelProviders
+import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import com.example.gocoronago.HomePage.Summary
 import com.example.gocoronago.R
-import kotlinx.android.synthetic.main.main_fragment.*
+import com.example.gocoronago.base.RequestResult
+import kotlinx.android.synthetic.main.total_cases.*
+import kotlinx.android.synthetic.main.total_cured.*
+import kotlinx.android.synthetic.main.total_death.*
 
 class MainFragment : Fragment() {
 
@@ -24,10 +30,59 @@ class MainFragment : Fragment() {
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        init()
+    }
+
+    private fun init() {
+//        initRV()
+        initViewModel()
+        initViewModelObservers()
+//        initNetworkContainer()
+    }
+
+    private fun initViewModel() {
+        viewModel = ViewModelProviders.of(this, MainViewModelFactory())
+            .get(MainViewModel::class.java)
+    }
+
+    private fun initViewModelObservers() {
+        viewModel.covidSummaryData.observe(viewLifecycleOwner, Observer {
+            if (it != null) {
+                onGetCovidSummary(it)
+            }
+        })
+    }
+
+    private fun onGetCovidSummary(requestResult: RequestResult<Any?>) {
+        when (requestResult) {
+            is RequestResult.Loading -> {
+//                showLoading()
+            }
+            is RequestResult.Success -> {
+                onGetCovidSummarySuccess(requestResult as RequestResult.Success)
+            }
+            is RequestResult.Error -> {
+//                showErrorState()
+            }
+        }
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun onGetCovidSummarySuccess(response: RequestResult.Success<Any?>) {
+        if (response.data is Summary?) {
+            val covidResponse: Summary? = response.data
+            covidResponse?.let {
+                total_cases_tv.text =
+                    "Total Confirmed Cases \n " + covidResponse.global.totalConfirmed.toString()
+                total_cured_tv.text =
+                    "Total Cured Cases \n " + covidResponse.global.totalRecovered.toString()
+                total_deaths_tv.text =
+                    "Total Deaths \n " + covidResponse.global.totalDeaths.toString()
+            }
+        }
     }
 
 
