@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/background_light"
-    android:orientation="vertical">
+<layout>
 
     <data>
 
     </data>
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1.0"
-        android:orientation="horizontal">
+        android:background="@android:color/background_light"
+        android:orientation="vertical">
 
-        <include
-            android:id="@+id/total_case_ll"
-            layout="@layout/total_cases"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
 
-        <include
-            android:id="@+id/total_deaths_ll"
-            layout="@layout/total_death"
+            <include
+                android:id="@+id/total_case_ll"
+                layout="@layout/total_cases"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+            <include
+                android:id="@+id/total_deaths_ll"
+                layout="@layout/total_death"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
 
+            <include
+                android:id="@+id/total_cured_ll"
+                layout="@layout/total_cured"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+            <include
+                android:id="@+id/stay_home_ll"
+                layout="@layout/stay_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1.0"
-        android:orientation="horizontal">
-
-        <include
-            android:id="@+id/total_cured_ll"
-            layout="@layout/total_cured"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1.0" />
-
-        <include
-            android:id="@+id/stay_home_ll"
-            layout="@layout/stay_home"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1.0" />
-
-    </LinearLayout>
-</LinearLayout>
+</layout>
