@@ -1,0 +1,54 @@
+#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+
+.gradle
+/.idea/workspace.xml
+/.idea/libraries
+.idea/caches/
+.idea/codeStyles/codeStyleConfig.xml
+.DS_Store
+/build
+
+#remove studio files
+*.iml
+.idea/*.xml
+
+# ignore apk files
+app/prod/
+app/dev/
+app/arya/
+app/ned/
+app/beta/
+.idea/caches/
+.idea/codeStyles/
+.idea/copyright/
+.idea/dictionaries/
+.idea/markdown-navigator
+.idea/shelf/
+captures/
+
+# ignore app bundles
+app/release/
+
+!/.idea/codeStyleSettings.xml
+
+# android studio 3.5
+apk/
+app/daenerys/
+daenerys/
+app/schemas/
