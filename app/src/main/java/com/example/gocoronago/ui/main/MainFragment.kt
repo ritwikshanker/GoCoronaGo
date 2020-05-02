@@ -77,10 +77,16 @@ class MainFragment : Fragment() {
             covidResponse?.let {
                 total_cases_tv.text =
                     "Total Confirmed Cases \n " + covidResponse.global.totalConfirmed.toString()
+                total_cases_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newConfirmed.toString()
                 total_cured_tv.text =
                     "Total Cured Cases \n " + covidResponse.global.totalRecovered.toString()
+                total_cured_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newRecovered.toString()
                 total_deaths_tv.text =
                     "Total Deaths \n " + covidResponse.global.totalDeaths.toString()
+                total_deaths_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newDeaths.toString()
             }
         }
     }
