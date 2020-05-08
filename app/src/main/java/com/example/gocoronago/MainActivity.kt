@@ -1,8 +1,11 @@
 package com.example.gocoronago
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.gocoronago.ui.main.MainFragment
+import kotlinx.android.synthetic.main.main_activity.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,5 +17,19 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
         }
+        init()
+    }
+
+    private fun init() {
+        initToolbar()
+    }
+
+    private fun initToolbar() {
+        setSupportActionBar(toolbar as Toolbar)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_tracker, menu)
+        return true
     }
 }
