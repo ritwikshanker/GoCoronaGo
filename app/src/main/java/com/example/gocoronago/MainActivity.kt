@@ -17,19 +17,6 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
         }
-        init()
-    }
 
-    private fun init() {
-        initToolbar()
-    }
-
-    private fun initToolbar() {
-        setSupportActionBar(toolbar as Toolbar)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_tracker, menu)
-        return true
     }
 }
