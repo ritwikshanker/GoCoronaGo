@@ -4,13 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.gocoronago.HomePage.Summary
 import com.example.gocoronago.R
 import com.example.gocoronago.base.RequestResult
+import kotlinx.android.synthetic.main.country_item.*
+import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.total_cases.*
 import kotlinx.android.synthetic.main.total_cured.*
 import kotlinx.android.synthetic.main.total_death.*
@@ -36,7 +39,7 @@ class MainFragment : Fragment() {
     }
 
     private fun init() {
-//        initRV()
+        initRV()
         initViewModel()
         initViewModelObservers()
 //        initNetworkContainer()
@@ -73,8 +76,8 @@ class MainFragment : Fragment() {
     private fun onGetCovidSummarySuccess(response: RequestResult.Success<Any?>) {
         if (response.data is Summary?) {
             val covidResponse: Summary? = response.data
-
             covidResponse?.let {
+                covidResponse.countries?.let { it1 -> submitList(it1) }
                 total_cases_tv.visibility = View.VISIBLE
                 total_cases_tv.text =
                     "Total Confirmed Cases \n " + covidResponse.global.totalConfirmed.toString()
@@ -97,5 +100,21 @@ class MainFragment : Fragment() {
         }
     }
 
+
+    private lateinit var adapter: MainAdapter
+    private lateinit var itemDecorator: MainItemDecorator
+    private fun initRV() {
+        adapter = MainAdapter(
+            requireContext()
+        )
+        itemDecorator = MainItemDecorator(requireContext())
+        countries_rv.adapter = adapter
+        countries_rv.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        countries_rv.addItemDecoration(itemDecorator)
+    }
+
+    private fun submitList(movieList: List<Any>) {
+        adapter.submitList(movieList)
+    }
 
 }
