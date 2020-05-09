@@ -123,7 +123,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
             adapter = aa
             setSelection(0, false)
             onItemSelectedListener = this@MainFragment
-            prompt = "Select your favourite language"
+            prompt = "Select Country"
             gravity = Gravity.CENTER
 
         }
@@ -163,10 +163,16 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        TODO("Not yet implemented")
+        when (view?.id) {
+            1 -> showToast(message = "Spinner 2 Position:${position} and language: ${countriesList[position]}")
+            else -> {
+                showToast(message = "Country Selected : ${countriesList[position]}")
+
+            }
+        }
     }
 
-    private fun showToast(message: String, duration: Int = Toast.LENGTH_LONG) {
+    private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(context, message, duration).show()
     }
 
