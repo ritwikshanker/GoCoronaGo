@@ -16,16 +16,23 @@
         <LinearLayout
             android:id="@+id/countries_ll"
             android:layout_width="match_parent"
+            android:paddingTop="8dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.7">
+            android:layout_weight="1.8">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/countries_rv"
+            <Spinner
+                android:id="@+id/mySpinner"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
-                android:paddingBottom="20dp"
-                android:visibility="visible" />
+                android:spinnerMode="dropdown"
+                android:layout_height="wrap_content" />
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:id="@+id/countries_rv"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:clipToPadding="false"-->
+            <!--                android:paddingBottom="20dp"-->
+            <!--                android:visibility="visible" />-->
         </LinearLayout>
 
         <LinearLayout
