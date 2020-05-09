@@ -16,9 +16,8 @@
         <LinearLayout
             android:id="@+id/countries_ll"
             android:layout_width="match_parent"
-            android:paddingTop="8dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.8">
+            android:layout_weight="1.7">
 
             <Spinner
                 android:id="@+id/mySpinner"
