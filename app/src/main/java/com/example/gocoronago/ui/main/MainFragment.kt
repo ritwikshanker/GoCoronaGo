@@ -5,10 +5,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.LinearLayout
-import android.widget.Spinner
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -102,10 +99,9 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         }
     }
 
-    private var languages = arrayOf("Java", "PHP", "Kotlin", "Javascript", "Python", "Swift")
     private val NEW_SPINNER_ID = 1
 
-    private var countriesList: ArrayList<Any> = ArrayList()
+    private var countriesList: ArrayList<Any> = arrayListOf("Worldwide")
 
     private lateinit var adapter: MainAdapter
     private lateinit var itemDecorator: MainItemDecorator
@@ -163,11 +159,15 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
-        TODO("Not yet implemented")
+        showToast(message = "Nothing Selected")
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         TODO("Not yet implemented")
+    }
+
+    private fun showToast(message: String, duration: Int = Toast.LENGTH_LONG) {
+        Toast.makeText(context, message, duration).show()
     }
 
 }
