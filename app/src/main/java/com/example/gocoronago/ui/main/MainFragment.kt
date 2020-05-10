@@ -76,7 +76,6 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
             initRV(response.data)
             val covidResponse: Summary? = response.data
             covidResponse?.let {
-                covidResponse.countries?.let { it1 -> submitList(it1) }
                 total_cases_tv.visibility = View.VISIBLE
                 total_cases_tv.text =
                     "Total Confirmed Cases \n " + covidResponse.global.totalConfirmed.toString()
