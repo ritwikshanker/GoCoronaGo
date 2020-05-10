@@ -7,9 +7,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gocoronago.HomePage.CountriesItem
 import com.example.gocoronago.R
-import com.example.gocoronago.databinding.CountryItemBinding
+import com.example.gocoronago.databinding.MainFragmentBinding
+import kotlinx.android.synthetic.main.country_item.view.*
 
-class MainViewHolder(val binding: CountryItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class MainViewHolder(val binding: MainFragmentBinding) : RecyclerView.ViewHolder(binding.root) {
 
     companion object {
         const val layout = R.layout.country_item
@@ -17,7 +18,7 @@ class MainViewHolder(val binding: CountryItemBinding) : RecyclerView.ViewHolder(
             context: Context, inflater: LayoutInflater,
             viewGroup: ViewGroup
         ): MainViewHolder {
-            val binding = DataBindingUtil.inflate<CountryItemBinding>(
+            val binding = DataBindingUtil.inflate<MainFragmentBinding>(
                 inflater,
                 layout, viewGroup, false
             )
@@ -28,7 +29,7 @@ class MainViewHolder(val binding: CountryItemBinding) : RecyclerView.ViewHolder(
     }
 
     fun bind(countriesItem: CountriesItem) {
-        binding.countryNameTv.text = countriesItem.country
+        binding.countriesLl.country_name_tv.text = countriesItem.country
     }
 
 
