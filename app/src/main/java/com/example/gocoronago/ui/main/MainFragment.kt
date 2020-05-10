@@ -102,11 +102,13 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private val NEW_SPINNER_ID = 1
 
     private var countriesList: ArrayList<Any> = arrayListOf("Worldwide")
-
+    private lateinit var covidResponse: Summary
     private lateinit var adapter: MainAdapter
     private lateinit var itemDecorator: MainItemDecorator
     private fun initRV(data: Summary?) {
-        val covidResponse: Summary? = data
+        if (data != null) {
+            covidResponse = data
+        }
         for (i in covidResponse?.countries!!) {
             countriesList.add(i.country)
         }
@@ -167,13 +169,66 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
             1 -> showToast(message = "Spinner 2 Position:${position} and language: ${countriesList[position]}")
             else -> {
                 showToast(message = "Country Selected : ${countriesList[position]}")
-
+                setCountryData(countriesList[position] as String, covidResponse)
             }
         }
     }
 
     private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(context, message, duration).show()
+    }
+
+    private fun setCountryData(
+        countryName: String,
+        covidResponse: Summary?
+    ) {
+        if (countryName == "Worldwide") {
+            covidResponse?.let {
+                total_cases_tv.visibility = View.VISIBLE
+                total_cases_tv.text =
+                    "Total Confirmed Cases \n " + covidResponse.global.totalConfirmed.toString()
+                total_cases_increased_tv.visibility = View.VISIBLE
+                total_cases_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newConfirmed.toString()
+                total_cured_tv.visibility = View.VISIBLE
+                total_cured_tv.text =
+                    "Total Cured Cases \n " + covidResponse.global.totalRecovered.toString()
+                total_cured_increased_tv.visibility = View.VISIBLE
+                total_cured_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newRecovered.toString()
+                total_deaths_tv.visibility = View.VISIBLE
+                total_deaths_tv.text =
+                    "Total Deaths \n " + covidResponse.global.totalDeaths.toString()
+                total_deaths_increased_tv.visibility = View.VISIBLE
+                total_deaths_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newDeaths.toString()
+            }
+        } else {
+            for (i in covidResponse?.countries!!) {
+                if (countryName == i.country) {
+                    covidResponse?.let {
+                        total_cases_tv.visibility = View.VISIBLE
+                        total_cases_tv.text =
+                            "Total Confirmed Cases \n " + i.totalConfirmed.toString()
+                        total_cases_increased_tv.visibility = View.VISIBLE
+                        total_cases_increased_tv.text =
+                            "\u2191 " + i.newConfirmed.toString()
+                        total_cured_tv.visibility = View.VISIBLE
+                        total_cured_tv.text =
+                            "Total Cured Cases \n " + i.totalRecovered.toString()
+                        total_cured_increased_tv.visibility = View.VISIBLE
+                        total_cured_increased_tv.text =
+                            "\u2191 " + i.newRecovered.toString()
+                        total_deaths_tv.visibility = View.VISIBLE
+                        total_deaths_tv.text =
+                            "Total Deaths \n " + i.totalDeaths.toString()
+                        total_deaths_increased_tv.visibility = View.VISIBLE
+                        total_deaths_increased_tv.text =
+                            "\u2191 " + i.newDeaths.toString()
+                    }
+                }
+            }
+        }
     }
 
 }
