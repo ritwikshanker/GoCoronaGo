@@ -15,7 +15,7 @@ class MainViewModel() :
         getCovidSummaryData()
     }
 
-    private fun getCovidSummaryData() {
+    fun getCovidSummaryData() {
         viewModelScope.launch {
             covidSummaryData.value = RequestResult.Loading("")
             try {
