@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/total_cases_iv"
         android:layout_width="0dp"
@@ -15,13 +16,13 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        app:layout_constraintHorizontal_bias="0.0"
         app:lottie_rawRes="@raw/coronavirussick" />
 
     <TextView
@@ -30,8 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Total Cases Worldwide"
-        android:visibility="gone"
         android:textAlignment="center"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/total_cases_iv" />
@@ -48,5 +49,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/total_cases_tv" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -65,7 +65,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 onGetCovidSummarySuccess(requestResult as RequestResult.Success)
             }
             is RequestResult.Error -> {
-//                showErrorState()
+                viewModel.getCovidSummaryData()
             }
         }
 
