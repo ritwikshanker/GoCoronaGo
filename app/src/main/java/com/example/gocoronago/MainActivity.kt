@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar
 import com.example.gocoronago.ui.main.MainFragment
 import kotlinx.android.synthetic.main.main_activity.*
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,5 +1,6 @@
 package com.example.gocoronago.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.gocoronago.HomePage.Summary
 import com.example.gocoronago.R
 import com.example.gocoronago.base.RequestResult
+import com.example.gocoronago.stayHome.StayHomeActivity
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.total_cases.*
 import kotlinx.android.synthetic.main.total_cured.*
@@ -41,6 +43,14 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         initViewModel()
         initViewModelObservers()
 //        initNetworkContainer()
+        initClickListeners()
+    }
+
+    private fun initClickListeners() {
+        stay_home_ll.setOnClickListener {
+            val intent = Intent(context, StayHomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initViewModel() {
