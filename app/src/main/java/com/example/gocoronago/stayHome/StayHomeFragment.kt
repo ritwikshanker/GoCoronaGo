@@ -10,7 +10,6 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.gocoronago.R
-import com.example.gocoronago.ui.main.MainFragment
 import kotlinx.android.synthetic.main.stay_home_vp.*
 
 class StayHomeFragment : DialogFragment() {
@@ -83,10 +82,23 @@ class StayHomeFragment : DialogFragment() {
         stay_home_vp.id = R.id.stay_home_vp
     }
 
+    override fun onResume() {
+        super.onResume()
+        dialog?.setOnKeyListener { dialog, keyCode, event ->
+            if ((keyCode == android.view.KeyEvent.KEYCODE_BACK)) {
+                // To dismiss the fragment when the back-button is pressed.
+                dismiss()
+                true
+            } else
+                false// Otherwise, do nothing else
+        }
+    }
+
     private fun initClickListener() {
 //        start_bt.setOnClickListener {
 //            onDestroyView()
 //        }
+
     }
 
     private var fragments = mutableListOf<Fragment>()
@@ -97,7 +109,7 @@ class StayHomeFragment : DialogFragment() {
             bundle.putInt(StayHomeDataFragment.ID, it.first)
             bundle.putString(StayHomeDataFragment.TEXT, it.second)
             fragments.add(StayHomeDataFragment.newInstance(bundle))
-            titles.add("sddasd")
+            titles.add("Value")
         }
     }
 

@@ -37,6 +37,7 @@ class StayHomeDataFragment : Fragment() {
         init()
     }
 
+
     private fun init() {
         initBundle()
         initSetData()
