@@ -7,41 +7,22 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/stay_home_vp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@id/stay_home_tl"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/stay_home_tl"
-        android:layout_width="40dp"
+        android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@id/start_bt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/stay_home_vp"
-        app:tabBackground="@drawable/selector_indicator" />
-
-    <Button
-        android:id="@+id/start_bt"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#1E90FF"
-        android:gravity="center_horizontal|center_vertical"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:text="Start"
-        android:textAllCaps="false"
-        android:textColor="#ffffff"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:cornerRadius="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stay_home_tl" />
+        app:layout_constraintTop_toBottomOf="@+id/stay_home_vp"
+        app:tabBackground="@drawable/selector_indicator" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

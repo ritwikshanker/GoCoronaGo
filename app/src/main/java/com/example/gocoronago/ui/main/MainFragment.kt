@@ -83,7 +83,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private fun onGetCovidSummarySuccess(response: RequestResult.Success<Any?>) {
         if (response.data is Summary?) {
-            initRV(response.data)
+            initSpinner(response.data)
             val covidResponse: Summary? = response.data
             covidResponse?.let {
                 total_cases_tv.visibility = View.VISIBLE
@@ -114,7 +114,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private lateinit var covidResponse: Summary
     private lateinit var adapter: MainAdapter
     private lateinit var itemDecorator: MainItemDecorator
-    private fun initRV(data: Summary?) {
+    private fun initSpinner(data: Summary?) {
         if (data != null) {
             covidResponse = data
         }
