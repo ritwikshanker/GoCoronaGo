@@ -123,11 +123,13 @@ class StayHomeFragment : DialogFragment() {
     private var titles = mutableListOf<String>()
     private fun initSetFragments() {
         fragmentData.forEach {
+            var count: Int = 0
             val bundle = Bundle()
             bundle.putInt(StayHomeDataFragment.ID, it.first)
             bundle.putString(StayHomeDataFragment.TEXT, it.second)
             fragments.add(StayHomeDataFragment.newInstance(bundle))
-            titles.add("Value")
+            titles.add(count.toString())
+            count += 1;
         }
     }
 

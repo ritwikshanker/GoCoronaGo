@@ -22,7 +22,8 @@
                 android:id="@+id/mySpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:spinnerMode="dropdown" />
+                android:spinnerMode="dialog"
+                android:padding="6dp" />
 
         </LinearLayout>
 
