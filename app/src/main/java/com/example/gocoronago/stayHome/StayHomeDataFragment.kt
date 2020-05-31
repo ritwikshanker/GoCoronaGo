@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
+import com.airbnb.lottie.LottieDrawable
 import com.example.gocoronago.R
 import kotlinx.android.synthetic.main.stay_home_item.*
 
@@ -55,7 +56,7 @@ class StayHomeDataFragment : Fragment() {
         lottieAnimationView.imageAssetsFolder = ("images/raw")
         lottieAnimationView.setAnimation(resId)
         lottieAnimationView.playAnimation()
-        lottieAnimationView.loop(true)
+        lottieAnimationView.repeatCount = LottieDrawable.INFINITE
         animated_tv.text = textView
     }
 }
