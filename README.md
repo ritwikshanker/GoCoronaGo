@@ -19,14 +19,10 @@ We provide some amazing functionalities like -
 
 Upcoming Features -
 
-
-☑️  - Graphs for better Visualisation
-
-☑️  - Dark Mode
-
-☑️  - More Personalisation Option 
-
-☑️  - Developer Info Screen
+- Graphs for better Visualisation
+- Dark Mode
+- More Personalisation Option 
+- Developer Info Screen
 
 
 
