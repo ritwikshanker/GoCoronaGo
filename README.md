@@ -17,7 +17,7 @@ We provide some amazing functionalities like -
 
 ☑️  - Support for small screen Devices
 
-Upcoming Features -
+**Upcoming Features -**
 
 - Graphs for better Visualisation
 - Dark Mode
