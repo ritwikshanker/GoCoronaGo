@@ -43,6 +43,8 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     private fun init() {
+        showToastLong(message = "Made with ❤️ in \uD83C\uDDEE\uD83C\uDDF3")
+        showToast(message = "Developer : Ritwik Shanker")
         initViewModel()
         initViewModelObservers()
 //        initNetworkContainer()
@@ -211,6 +213,10 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
+        Toast.makeText(context, message, duration).show()
+    }
+
+    private fun showToastLong(message: String, duration: Int = Toast.LENGTH_LONG) {
         Toast.makeText(context, message, duration).show()
     }
 
