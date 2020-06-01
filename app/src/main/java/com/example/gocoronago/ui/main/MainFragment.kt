@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.example.gocoronago.HomePage.Summary
@@ -57,7 +57,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     private fun initViewModel() {
-        viewModel = ViewModelProviders.of(this, MainViewModelFactory())
+        viewModel = ViewModelProvider(this, MainViewModelFactory())
             .get(MainViewModel::class.java)
     }
 
@@ -75,7 +75,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
 //                showLoading()
             }
             is RequestResult.Success -> {
-                onGetCovidSummarySuccess(requestResult as RequestResult.Success)
+                onGetCovidSummarySuccess(requestResult)
             }
             is RequestResult.Error -> {
                 viewModel.getCovidSummaryData()
