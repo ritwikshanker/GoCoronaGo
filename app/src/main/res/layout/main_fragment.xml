@@ -72,6 +72,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@id/total_cured_ll"
+            android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/total_deaths_ll" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

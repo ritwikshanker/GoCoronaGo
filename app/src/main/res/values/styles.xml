@@ -1,9 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Widget.AppCompat.Light.ActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">?android:attr/colorBackground</item>
+        <item name="colorPrimaryDark">?android:attr/colorPrimaryDark</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">true</item>
     </style>
-
 
     <style name="DividerHorizontal">
         <item name="android:layout_width">match_parent</item>

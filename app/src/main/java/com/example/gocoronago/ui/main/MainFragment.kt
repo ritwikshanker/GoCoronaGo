@@ -43,8 +43,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     private fun init() {
-        showToastLong(message = "Made with ❤️ in \uD83C\uDDEE\uD83C\uDDF3")
-        showToast(message = "Developer : Ritwik Shanker")
+        showToastLong(message = "Made with ❤️ in \uD83C\uDDEE\uD83C\uDDF3 by Ritwik")
         initViewModel()
         initViewModelObservers()
 //        initNetworkContainer()
@@ -127,6 +126,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 total_deaths_increased_tv.visibility = View.VISIBLE
                 total_deaths_increased_tv.text =
                     "\u2191 " + covidResponse.global.newDeaths.toString()
+                stay_home_ll.visibility = View.VISIBLE
                 val stayHomeImage = (stay_home_iv) as LottieAnimationView
                 stayHomeImage.imageAssetsFolder = ("images/raw")
                 stayHomeImage.setAnimation(R.raw.staysafestayhome)

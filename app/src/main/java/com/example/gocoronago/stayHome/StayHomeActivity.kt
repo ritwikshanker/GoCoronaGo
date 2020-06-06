@@ -3,6 +3,7 @@ package com.example.gocoronago.stayHome
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gocoronago.R
 
@@ -31,5 +32,11 @@ class StayHomeActivity : AppCompatActivity() {
 //        setContentView(R.layout.main_fragment)
     }
 
+    @Override
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_tracker, menu)
+        return true
+    }
 
 }
