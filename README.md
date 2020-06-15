@@ -1,4 +1,7 @@
 # GoCoronaGo
+
+Check this ink out - https://ritwikshanker.github.io/GoCoronaGo/
+
 We provide some amazing functionalities like -
 
 ☑️  - A beautiful Clean UI with no advertisements.
