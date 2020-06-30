@@ -32,11 +32,11 @@ class StayHomeActivity : AppCompatActivity() {
 //        setContentView(R.layout.main_fragment)
     }
 
-    @Override
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.menu_tracker, menu)
-        return true
-    }
+//    @Override
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        val inflater = menuInflater
+//        inflater.inflate(R.menu.menu_tracker, menu)
+//        return true
+//    }
 
 }

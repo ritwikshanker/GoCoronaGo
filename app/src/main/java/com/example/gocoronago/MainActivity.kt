@@ -19,12 +19,12 @@ open class MainActivity : AppCompatActivity() {
         }
     }
 
-    @Override
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.menu_tracker, menu)
-        return true
-    }
+//    @Override
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        val inflater = menuInflater
+//        inflater.inflate(R.menu.menu_tracker, menu)
+//        return true
+//    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (item.itemId == R.id.setting) {
