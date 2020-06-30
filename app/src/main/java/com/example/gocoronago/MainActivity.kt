@@ -1,9 +1,11 @@
 package com.example.gocoronago
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.example.gocoronago.settings.SettingsActivity
 import com.example.gocoronago.ui.main.MainFragment
 
 
@@ -28,8 +30,9 @@ open class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (item.itemId == R.id.setting) {
-            //Do your stuff here
-            true
+            val intent = Intent(this@MainActivity, SettingsActivity::class.java)
+            startActivity(intent)
+            return true
         } else super.onOptionsItemSelected(item)
     }
 }

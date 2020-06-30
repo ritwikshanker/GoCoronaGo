@@ -27,6 +27,10 @@
         <activity
             android:name=".stayHome.StayHomeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/settings"
+            android:configChanges="uiMode" />
 
     </application>
 
