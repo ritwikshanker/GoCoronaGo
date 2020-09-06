@@ -29,11 +29,6 @@ local.properties
 .idea/*.xml
 
 # ignore apk files
-app/prod/
-app/dev/
-app/arya/
-app/ned/
-app/beta/
 .idea/caches/
 .idea/codeStyles/
 .idea/copyright/
@@ -49,6 +44,4 @@ app/release/
 
 # android studio 3.5
 apk/
-app/daenerys/
-daenerys/
 app/schemas/
