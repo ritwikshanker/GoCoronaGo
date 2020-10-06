@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.github.angads25.toggle.widget.LabeledSwitch
+        android:id="@+id/labeled_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="14sp"
+        app:on="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:textOn="Dark"
+        app:textOff="Light"
+        app:colorOn="#000000"
+        app:colorBorder="#1D1E1E"/>
+</RelativeLayout>

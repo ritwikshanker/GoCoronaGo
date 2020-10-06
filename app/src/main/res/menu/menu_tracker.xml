@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="AlwaysShowAction">
     <item
-        android:id="@+id/setting"
-        android:icon="@drawable/ic_settings_24px"
-        android:title="@string/settings"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/dark_mode_switch"
+        android:title="Switch"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
 </menu>
