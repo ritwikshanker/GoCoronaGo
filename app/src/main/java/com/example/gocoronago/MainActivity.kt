@@ -11,7 +11,7 @@ import com.example.gocoronago.about.AboutFragment
 import com.example.gocoronago.ui.main.MainFragment
 import com.github.angads25.toggle.widget.LabeledSwitch
 
-private var darkMode = false
+private var darkMode = true
 
 open class MainActivity : AppCompatActivity() {
 
