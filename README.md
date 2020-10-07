@@ -20,11 +20,12 @@ We provide some amazing functionalities like -
 
 ☑️  - Dark Theme 
 
+☑️  - Developer Info Screen
+
 **Upcoming Features -**
 
 - Graphs for better Visualisation
 - More Personalisation Option 
-- Developer Info Screen
 
 
 
