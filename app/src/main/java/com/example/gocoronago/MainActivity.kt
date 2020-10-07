@@ -1,11 +1,15 @@
 package com.example.gocoronago
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.gocoronago.ui.main.MainFragment
+import com.github.angads25.toggle.widget.LabeledSwitch
 
+private var darkMode = true
 
 open class MainActivity : AppCompatActivity() {
 
@@ -19,15 +23,35 @@ open class MainActivity : AppCompatActivity() {
         }
     }
 
-//    @Override
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        val inflater = menuInflater
-//        inflater.inflate(R.menu.menu_tracker, menu)
-//        return true
-//    }
+    @Override
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_tracker, menu)
+
+        val switchItem = menu?.findItem(R.id.dark_mode_switch)
+        val darkSwitch = switchItem?.actionView?.findViewById<LabeledSwitch>(R.id.labeled_switch)
+        darkSwitch?.isOn = darkMode
+        darkSwitch?.setOnToggledListener { toggleableView, isOn ->
+            val isNightTheme =
+                resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            when (isNightTheme) {
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    darkMode = false
+                }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    darkMode = true
+                }
+            }
+        }
+
+        return true
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (item.itemId == R.id.setting) {
+        return if (item.itemId == R.id.dark_mode_switch) {
             //Do your stuff here
             true
         } else super.onOptionsItemSelected(item)
