@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.example.gocoronago.HomePage.Summary
+import com.example.gocoronago.MainActivity
 import com.example.gocoronago.R
 import com.example.gocoronago.base.RequestResult
 import com.example.gocoronago.stayHome.StayHomeActivity
@@ -39,11 +41,11 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupNavBar()
         init()
     }
 
     private fun init() {
-        showToastLong(message = "Made with ❤️ in \uD83C\uDDEE\uD83C\uDDF3 by Ritwik")
         initViewModel()
         initViewModelObservers()
 //        initNetworkContainer()
@@ -273,4 +275,11 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         }
     }
 
+    private fun setupNavBar() {
+        (activity as? MainActivity)?.apply {
+            title = getString(R.string.app_name)
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            supportActionBar?.setHomeButtonEnabled(false)
+        }
+    }
 }

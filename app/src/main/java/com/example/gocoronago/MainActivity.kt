@@ -6,10 +6,12 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.fragment.app.Fragment
+import com.example.gocoronago.about.AboutFragment
 import com.example.gocoronago.ui.main.MainFragment
 import com.github.angads25.toggle.widget.LabeledSwitch
 
-private var darkMode = true
+private var darkMode = false
 
 open class MainActivity : AppCompatActivity() {
 
@@ -51,9 +53,23 @@ open class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (item.itemId == R.id.dark_mode_switch) {
-            //Do your stuff here
-            true
-        } else super.onOptionsItemSelected(item)
+        return when (item.itemId) {
+            R.id.about_us -> {
+                goToFragment(AboutFragment.newInstance())
+                true
+            }
+            android.R.id.home -> {
+                super.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun goToFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

@@ -8,4 +8,8 @@
         android:title="Switch"
         app:actionLayout="@layout/switch_item"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/about_us"
+        android:title="@string/about_us"
+        app:showAsAction="never" />
 </menu>
