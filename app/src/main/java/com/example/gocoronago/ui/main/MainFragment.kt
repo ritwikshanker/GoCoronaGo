@@ -139,8 +139,6 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         }
     }
 
-    private val NEW_SPINNER_ID = 1
-
     private var countriesList: ArrayList<Any> = arrayListOf("Worldwide")
     private lateinit var covidResponse: Summary
     private lateinit var adapter: MainAdapter
@@ -152,13 +150,10 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         for (i in covidResponse?.countries!!) {
             countriesList.add(i.country)
         }
-        adapter = MainAdapter(
-            requireContext()
-        )
+        adapter = MainAdapter(requireContext())
         itemDecorator = MainItemDecorator(requireContext())
-        var aa =
-            context?.let { ArrayAdapter(it, android.R.layout.simple_spinner_item, countriesList) }
-        aa?.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val aa = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, countriesList)
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         with(mySpinner)
         {
@@ -167,37 +162,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
             onItemSelectedListener = this@MainFragment
             prompt = "Select Country"
             gravity = Gravity.CENTER
-
         }
-
-        val spinner = Spinner(this.context)
-        spinner.id = NEW_SPINNER_ID
-
-        val ll = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
-
-        ll.setMargins(10, 40, 10, 10)
-        countries_ll.addView(spinner)
-
-        aa = context?.let { ArrayAdapter(it, R.layout.country_item, countriesList) }
-        aa?.setDropDownViewResource(R.layout.country_item)
-
-        with(spinner)
-        {
-            adapter = aa
-            setSelection(0, false)
-            onItemSelectedListener = this@MainFragment
-            layoutParams = ll
-            prompt = "Select country"
-            setPopupBackgroundResource(R.color.material_grey_600)
-
-        }
-    }
-
-    private fun submitList(movieList: List<Any>) {
-        adapter.submitList(movieList)
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {

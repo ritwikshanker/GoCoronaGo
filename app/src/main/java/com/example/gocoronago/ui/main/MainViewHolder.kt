@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.gocoronago.HomePage.CountriesItem
 import com.example.gocoronago.R
 import com.example.gocoronago.databinding.MainFragmentBinding
-import kotlinx.android.synthetic.main.country_item.view.*
 
 class MainViewHolder(val binding: MainFragmentBinding) : RecyclerView.ViewHolder(binding.root) {
 
@@ -29,8 +28,6 @@ class MainViewHolder(val binding: MainFragmentBinding) : RecyclerView.ViewHolder
     }
 
     fun bind(countriesItem: CountriesItem) {
-        binding.countriesLl.country_name_tv.text = countriesItem.country
+//        binding.mySpinner.country_name_tv.text = countriesItem.country
     }
-
-
 }
