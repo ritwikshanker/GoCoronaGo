@@ -64,20 +64,13 @@
         android:text="Contributors"
         android:textSize="18sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/containerContributors"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="4dp"
-        android:text="Ritwik Shanker \nM. Asrof Bayhaqqi \nSunny"
-        android:textSize="14sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="4dp"
-        android:text="Made with ❤️ in 🇮🇳 and 🇮🇩"
-        android:textSize="14sp" />
+        android:orientation="vertical" />
 
     <View
         android:layout_width="match_parent"
