@@ -1,6 +1,5 @@
 package com.example.gocoronago.ui.main
 
-import android.content.Context
 import com.example.gocoronago.HomePage.Summary
 import com.example.gocoronago.base.BaseRepo
 
