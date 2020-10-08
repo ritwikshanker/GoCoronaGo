@@ -1,6 +1,5 @@
 package com.example.gocoronago.ui.main
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 

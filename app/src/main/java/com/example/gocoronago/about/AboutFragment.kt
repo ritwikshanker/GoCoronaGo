@@ -1,6 +1,5 @@
 package com.example.gocoronago.about
 
-import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.TypedValue
@@ -24,7 +23,8 @@ class AboutFragment : Fragment() {
     private val contributors = listOf(
         Contributor("Ritwik Shanker", "🇮🇳", true),
         Contributor("Sunny", "🇮🇳"),
-        Contributor("M. Asrof Bayhaqqi", "🇮🇩")
+        Contributor("M. Asrof Bayhaqqi", "🇮🇩"),
+        Contributor("Jacob", "\uD83C\uDDF7\uD83C\uDDFA")
     )
 
     override fun onCreateView(
@@ -80,7 +80,7 @@ class AboutFragment : Fragment() {
 
     private fun createContributorTextView(index: Int, contributor: Contributor): TextView {
         val contributorText = "${contributor.flag} ${contributor.name}" +
-            if (contributor.owner) " (Owner)" else ""
+                if (contributor.owner) " (Owner)" else ""
         return TextView(requireContext()).apply {
             text = contributorText
             setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
