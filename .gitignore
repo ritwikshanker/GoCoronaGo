@@ -29,7 +29,6 @@ local.properties
 .idea/*.xml
 
 # ignore apk files
-.idea/caches/
 .idea/codeStyles/
 .idea/copyright/
 .idea/dictionaries/
