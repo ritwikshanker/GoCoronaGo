@@ -129,7 +129,7 @@ class StayHomeFragment : DialogFragment() {
             bundle.putString(StayHomeDataFragment.TEXT, it.second)
             fragments.add(StayHomeDataFragment.newInstance(bundle))
             titles.add(count.toString())
-            count += 1;
+            count += 1
         }
     }
 

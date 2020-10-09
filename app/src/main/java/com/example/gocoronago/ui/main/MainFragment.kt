@@ -148,7 +148,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         if (data != null) {
             covidResponse = data
         }
-        for (i in covidResponse?.countries!!) {
+        for (i in covidResponse.countries!!) {
             countriesList.add(i.country)
         }
         adapter = MainAdapter(requireContext())
@@ -216,7 +216,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         } else {
             for (i in covidResponse?.countries!!) {
                 if (countryName == i.country) {
-                    covidResponse?.let {
+                    covidResponse.let {
                         total_cases_tv.visibility = View.VISIBLE
                         total_cases_tv.text =
                             "Total Confirmed Cases \n " + i.totalConfirmed.toString()

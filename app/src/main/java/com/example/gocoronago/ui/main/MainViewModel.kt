@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.gocoronago.base.RequestResult
 import kotlinx.coroutines.launch
 
-class MainViewModel() :
+class MainViewModel :
     ViewModel() {
     var covidSummaryData: MutableLiveData<RequestResult<Any>> = MutableLiveData()
     var mainRepo = MainRepo()

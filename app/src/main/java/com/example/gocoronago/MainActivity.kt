@@ -51,8 +51,9 @@ open class MainActivity : AppCompatActivity() {
                 }
             }
             nightMode(darkMode)
-            val themepref:SharedPreferences=getSharedPreferences("userTheme", Context.MODE_PRIVATE)
-            val editor=themepref.edit()
+            val themepref: SharedPreferences =
+                getSharedPreferences("userTheme", Context.MODE_PRIVATE)
+            val editor = themepref.edit()
             editor.putBoolean("userTheme", darkMode)
             editor.apply()
         }
@@ -81,25 +82,25 @@ open class MainActivity : AppCompatActivity() {
             .commit()
     }
 
-    private fun initTheme(){
-        val themepref: SharedPreferences =getSharedPreferences("userTheme", Context.MODE_PRIVATE)
-        val editor=themepref.edit()
+    private fun initTheme() {
+        val themepref: SharedPreferences = getSharedPreferences("userTheme", Context.MODE_PRIVATE)
+        val editor = themepref.edit()
 
-        if(themepref.contains("userTheme")){
-            darkMode = themepref.getBoolean("userTheme",false)
-        }else{
+        if (themepref.contains("userTheme")) {
+            darkMode = themepref.getBoolean("userTheme", false)
+        } else {
             val isNightTheme =
                 resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-            darkMode = isNightTheme==Configuration.UI_MODE_NIGHT_YES
-            editor.putBoolean("userTheme",!true)
+            darkMode = isNightTheme == Configuration.UI_MODE_NIGHT_YES
+            editor.putBoolean("userTheme", !true)
             editor.apply()
         }
         nightMode(darkMode)
 
     }
 
-    private fun nightMode(on:Boolean){
-        if(on)
+    private fun nightMode(on: Boolean) {
+        if (on)
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         else
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
