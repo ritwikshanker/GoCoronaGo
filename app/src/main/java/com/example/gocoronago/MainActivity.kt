@@ -1,5 +1,7 @@
 package com.example.gocoronago
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
@@ -17,12 +19,15 @@ open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initTheme()
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
+
         }
+
     }
 
     @Override
@@ -39,14 +44,17 @@ open class MainActivity : AppCompatActivity() {
                 resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
             when (isNightTheme) {
                 Configuration.UI_MODE_NIGHT_YES -> {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                     darkMode = false
                 }
                 Configuration.UI_MODE_NIGHT_NO -> {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                     darkMode = true
                 }
             }
+            nightMode(darkMode)
+            val themepref:SharedPreferences=getSharedPreferences("userTheme", Context.MODE_PRIVATE)
+            val editor=themepref.edit()
+            editor.putBoolean("userTheme", darkMode)
+            editor.apply()
         }
 
         return true
@@ -71,5 +79,30 @@ open class MainActivity : AppCompatActivity() {
             .replace(R.id.container, fragment)
             .addToBackStack(null)
             .commit()
+    }
+
+    private fun initTheme(){
+        val themepref: SharedPreferences =getSharedPreferences("userTheme", Context.MODE_PRIVATE)
+        val editor=themepref.edit()
+
+        if(themepref.contains("userTheme")){
+            darkMode = themepref.getBoolean("userTheme",false)
+        }else{
+            val isNightTheme =
+                resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            darkMode = isNightTheme==Configuration.UI_MODE_NIGHT_YES
+            editor.putBoolean("userTheme",!true)
+            editor.apply()
+        }
+        nightMode(darkMode)
+
+    }
+
+    private fun nightMode(on:Boolean){
+        if(on)
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        else
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
     }
 }
