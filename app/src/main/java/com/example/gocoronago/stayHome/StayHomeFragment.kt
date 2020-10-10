@@ -70,7 +70,7 @@ class StayHomeFragment : DialogFragment() {
         )
         fragmentData.add(
             Pair(
-                R.raw.sneeze,
+                R.raw.sneeze_covid,
                 "Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze."
             )
         )
