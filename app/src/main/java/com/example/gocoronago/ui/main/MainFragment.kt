@@ -18,6 +18,8 @@ import com.example.gocoronago.HomePage.Summary
 import com.example.gocoronago.MainActivity
 import com.example.gocoronago.R
 import com.example.gocoronago.base.RequestResult
+import com.example.gocoronago.extensions.readInt
+import com.example.gocoronago.extensions.saveInt
 import com.example.gocoronago.stayHome.StayHomeActivity
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.stay_home.*
@@ -29,6 +31,8 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     companion object {
         fun newInstance() = MainFragment()
+
+        private val SHAREDPREF_SUFFIX = this::class.java.simpleName
     }
 
     private lateinit var viewModel: MainViewModel
@@ -158,8 +162,9 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         with(mySpinner)
         {
+            val selectedPos = requireActivity().readInt(SHAREDPREF_SUFFIX)
             adapter = aa
-            setSelection(0, false)
+            setSelection(selectedPos, false)
             onItemSelectedListener = this@MainFragment
             prompt = "Select Country"
             gravity = Gravity.CENTER
@@ -171,6 +176,7 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        requireActivity().saveInt(SHAREDPREF_SUFFIX, position)
         when (view?.id) {
             1 -> showToast(message = "Spinner 2 Position:${position} and language: ${countriesList[position]}")
             else -> {
