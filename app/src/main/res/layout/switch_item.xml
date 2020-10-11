@@ -11,8 +11,8 @@
         app:on="false"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        app:textOn="Dark"
-        app:textOff="Light"
+        app:textOn="@string/theme_dark"
+        app:textOff="@string/theme_light"
         app:colorOn="#000000"
         app:colorBorder="#1D1E1E"/>
 </RelativeLayout>
