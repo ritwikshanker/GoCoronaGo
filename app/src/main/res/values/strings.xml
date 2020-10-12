@@ -5,4 +5,7 @@
     <string name="gocoronago">GoCoronaGo</string>
     <string name="version">Version</string>
     <string name="contributors">Contributors</string>
+
+    <!-- SharedPreferences keys -->
+    <string name="sharedpref_key_prefix">com.example.gocoronago.%1$s</string>
 </resources>
