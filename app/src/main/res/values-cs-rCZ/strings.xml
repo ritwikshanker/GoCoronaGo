@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Main -->
+    <string name="app_name">Celosvětový tracker Coronaviru</string>
+    <string name="action_search">Hledat</string>
+    <string name="theme_dark">Tmavý</string>
+    <string name="theme_light">Světlý</string>
+
+    <string name="total_cases_worldwide">Celkem případů celosvětově</string>
+    <string name="total_cured_worldwide">Celkem vyléčených celosvětově</string>
+    <string name="total_deaths_worldwide">Celkem úmrtí celosvětově</string>
+
+    <string name="total_confirmed">Celkový počet potvrzených případů\n%d</string>
+	<string name="total_cured">Celkový počet uzdravených\n%d</string>
+    <string name="total_deaths">Celkem smrtí\n%d</string>
+    <string name="worldwide">Celosvětově</string>
+    <string name="select_country">Vybrat zemi</string>
+    <string name="nothing_selected">Nic nevybráno</string>
+    <string name="item_selected_1">Spinner 2 Pozice: %d a jazyk: %s</string>
+    <string name="country_selected">Vybraná země: %s</string>
+
+    <!-- AboutFragment -->
+    <string name="about_us">O nás</string>
+    <string name="gocoronago">GoCoronaGo</string>
+    <string name="version">Verze</string>
+    <string name="contributors">Přispěvatelé</string>
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">Doporučení proti nákaze</string>
+    <string name="wear_mask_text">Zakryjte si ústa a nos rouškou.</string>
+    <string name="stay_home_text">Zůstaňte doma a nevycházejte ven pokud to není nezbytně nutné.</string>
+    <string name="sneeze_text">Zakryjte si nos a ústa loktem nebo kapesníkem pokud se vám chce kašlat nebo kýchat.</string>
+    <string name="wash_your_hands_text">Čistěte si často ruce, používejte mýdlo a vodu nebo dezinfekci na alkoholové bázi.</string>
+    <string name="social_distancing_text">Držte bezpečnou vzdálenost od ostatních lidí kdykoliv je to možné.</string>
+    <string name="loved_ones_text">Zůstaňte v kontaktu se svými blízkými, aby se nikdo necítil osamocený v těchto náročných časech.</string>
+
+</resources>
