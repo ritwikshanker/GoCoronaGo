@@ -17,7 +17,9 @@ import com.airbnb.lottie.LottieDrawable
 import com.example.gocoronago.HomePage.Summary
 import com.example.gocoronago.MainActivity
 import com.example.gocoronago.R
+import com.example.gocoronago.base.BaseFragment
 import com.example.gocoronago.base.RequestResult
+import com.example.gocoronago.databinding.MainFragmentBinding
 import com.example.gocoronago.stayHome.StayHomeActivity
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.stay_home.*
@@ -25,7 +27,7 @@ import kotlinx.android.synthetic.main.total_cases.*
 import kotlinx.android.synthetic.main.total_cured.*
 import kotlinx.android.synthetic.main.total_death.*
 
-class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
+class MainFragment : BaseFragment<MainFragmentBinding>(), AdapterView.OnItemSelectedListener {
 
     companion object {
         fun newInstance() = MainFragment()
@@ -33,15 +35,9 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private lateinit var viewModel: MainViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
-    }
+    override fun layoutResourceId(): Int = R.layout.main_fragment
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun initViewCreated() {
         setupNavBar()
         init()
     }
