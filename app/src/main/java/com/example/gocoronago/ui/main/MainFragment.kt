@@ -2,7 +2,6 @@ package com.example.gocoronago.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -19,8 +18,6 @@ import com.example.gocoronago.HomePage.Summary
 import com.example.gocoronago.MainActivity
 import com.example.gocoronago.R
 import com.example.gocoronago.base.RequestResult
-import com.example.gocoronago.extensions.readInt
-import com.example.gocoronago.extensions.saveInt
 import com.example.gocoronago.stayHome.StayHomeActivity
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.stay_home.*
@@ -32,8 +29,6 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     companion object {
         fun newInstance() = MainFragment()
-
-        private val SHAREDPREF_SUFFIX = this::class.java.simpleName
     }
 
     private lateinit var viewModel: MainViewModel
@@ -104,12 +99,24 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 totalCasesImage.playAnimation()
                 totalCasesImage.repeatCount = LottieDrawable.INFINITE
                 totalCasesImage.disableExtraScaleModeInFitXY()
+                total_cases_tv.visibility = View.VISIBLE
+                total_cases_tv.text =
+                    "Total Confirmed Cases \n " + covidResponse.global.totalConfirmed.toString()
+                total_cases_increased_tv.visibility = View.VISIBLE
+                total_cases_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newConfirmed.toString()
                 val totalCasesIncreasedImage = (total_cured_iv) as LottieAnimationView
                 totalCasesIncreasedImage.imageAssetsFolder = ("images/raw")
                 totalCasesIncreasedImage.setAnimation(R.raw.covid19cured)
                 totalCasesIncreasedImage.playAnimation()
                 totalCasesIncreasedImage.repeatCount = LottieDrawable.INFINITE
                 totalCasesIncreasedImage.disableExtraScaleModeInFitXY()
+                total_cured_tv.visibility = View.VISIBLE
+                total_cured_tv.text =
+                    "Total Cured Cases \n " + covidResponse.global.totalRecovered.toString()
+                total_cured_increased_tv.visibility = View.VISIBLE
+                total_cured_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newRecovered.toString()
                 val totalDeathsImage = (total_deaths_iv) as LottieAnimationView
                 totalDeathsImage.imageAssetsFolder = ("images/raw")
                 totalDeathsImage.setAnimation(R.raw.covid19)
@@ -117,6 +124,11 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 totalDeathsImage.repeatCount = LottieDrawable.INFINITE
                 totalDeathsImage.disableExtraScaleModeInFitXY()
                 total_deaths_tv.visibility = View.VISIBLE
+                total_deaths_tv.text =
+                    "Total Deaths \n " + covidResponse.global.totalDeaths.toString()
+                total_deaths_increased_tv.visibility = View.VISIBLE
+                total_deaths_increased_tv.text =
+                    "\u2191 " + covidResponse.global.newDeaths.toString()
                 stay_home_ll.visibility = View.VISIBLE
                 val stayHomeImage = (stay_home_iv) as LottieAnimationView
                 stayHomeImage.imageAssetsFolder = ("images/raw")
@@ -144,16 +156,14 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
         val aa = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, countriesList)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        val selectedPos = requireActivity().readInt(SHAREDPREF_SUFFIX)
         with(mySpinner)
         {
             adapter = aa
-            setSelection(selectedPos, false)
+            setSelection(0, false)
             onItemSelectedListener = this@MainFragment
             prompt = "Select Country"
             gravity = Gravity.CENTER
         }
-        setCountryData(countriesList[selectedPos] as String, covidResponse)
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -161,7 +171,6 @@ class MainFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        requireActivity().saveInt(SHAREDPREF_SUFFIX, position)
         when (view?.id) {
             1 -> showToast(message = "Spinner 2 Position:${position} and language: ${countriesList[position]}")
             else -> {
