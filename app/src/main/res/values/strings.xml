@@ -1,6 +1,7 @@
 <resources>
 
     <!-- Main -->
+    <string name="app_name">Worldwide Corona Tracker</string>
     <string name="action_search">Search</string>
     <string name="theme_dark">Dark</string>
     <string name="theme_light">Light</string>
