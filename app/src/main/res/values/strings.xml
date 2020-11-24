@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Worldwide Corona Tracker</string>
     <string name="action_search">Search</string>
     <string name="about_us">About Us</string>
     <string name="gocoronago">GoCoronaGo</string>
