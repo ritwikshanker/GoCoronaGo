@@ -16,10 +16,10 @@
     <string name="total_cured">Total de recuperaciones\n%d</string>
     <string name="total_deaths">Muertes totales\n%d</string>
     <string name="worldwide">Mundial</string>
-    <string name="select_country">Seleccionar Pais</string>
+    <string name="select_country">Seleccionar País</string>
     <string name="nothing_selected">No se ha seleccionado nada</string>
     <string name="item_selected_1">Spinner 2 Position: %d and language: %s</string>
-    <string name="country_selected">Pais seleccionado: %s</string>
+    <string name="country_selected">País seleccionado: %s</string>
 
 
     <!-- AboutFragment -->
