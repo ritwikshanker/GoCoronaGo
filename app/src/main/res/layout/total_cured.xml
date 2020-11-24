@@ -26,7 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Total Cured Worldwide"
+        android:text="@string/total_cured_worldwide"
         android:textAlignment="center"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"

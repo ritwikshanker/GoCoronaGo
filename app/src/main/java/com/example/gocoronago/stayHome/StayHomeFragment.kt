@@ -59,37 +59,37 @@ class StayHomeFragment : DialogFragment() {
         fragmentData.add(
             Pair(
                 R.raw.wear_mask,
-                "Cover mouth and nose with mask."
+                getString(R.string.wear_mask_text)
             )
         )
         fragmentData.add(
             Pair(
                 R.raw.stay_safe_stay_home,
-                "Stay Home and avoid going out unless it is very important."
+                getString(R.string.stay_home_text)
             )
         )
         fragmentData.add(
             Pair(
                 R.raw.sneeze_covid,
-                "Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze."
+                getString(R.string.sneeze_text)
             )
         )
         fragmentData.add(
             Pair(
                 R.raw.wash_your_hands,
-                "Clean your hands often. Use soap and water, or an alcohol-based hand rub."
+                getString(R.string.wash_your_hands_text)
             )
         )
         fragmentData.add(
             Pair(
                 R.raw.social_distancing,
-                "Keep a safe distance from people whenever possible."
+                getString(R.string.social_distancing_text)
             )
         )
         fragmentData.add(
             Pair(
                 R.raw.loved_ones,
-                "Stay in touch with your loved ones so that no one feels alone in these tough times."
+                getString(R.string.loved_ones_text)
             )
         )
     }

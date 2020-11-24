@@ -3,7 +3,7 @@ package com.example.gocoronago.ui.main
 import android.annotation.SuppressLint
 import android.content.Context
 import androidx.recyclerview.widget.DiffUtil
-import com.example.gocoronago.HomePage.CountriesItem
+import com.example.gocoronago.homepage.CountriesItem
 
 class MoviesDiffCallback(context: Context) : DiffUtil.ItemCallback<Any>() {
     override fun areItemsTheSame(oldItem: Any, newItem: Any): Boolean {
