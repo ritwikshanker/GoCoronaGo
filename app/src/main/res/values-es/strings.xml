@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Main -->
+    <string name="app_name">Worldwide Corona Tracker</string>
+    <string name="action_search">Buscar</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="theme_light">Claro</string>
+
+    <string name="total_cases_worldwide">Total mundial de casos</string>
+    <string name="total_cured_worldwide">Total mundial de recuperados</string>
+    <string name="total_deaths_worldwide">Total mundial de muertes</string>
+
+    <string name="total_confirmed">Total de casos confirmados\n%d</string>
+    <string name="total_cured">Total de recuperaciones\n%d</string>
+    <string name="total_deaths">Muertes totales\n%d</string>
+    <string name="worldwide">Mundial</string>
+    <string name="select_country">Seleccionar Pais</string>
+    <string name="nothing_selected">No se ha seleccionado nada</string>
+    <string name="item_selected_1">Spinner 2 Position: %d and language: %s</string>
+    <string name="country_selected">Pais seleccionado: %s</string>
+
+
+    <!-- AboutFragment -->
+    <string name="about_us">Acerca de nosotros</string>
+    <string name="gocoronago">GoCoronaGo</string>
+    <string name="version">Version</string>
+    <string name="contributors">Colaboradores</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">Tips "Quedate En Casa"</string>
+    <string name="wear_mask_text">Cubre tu boca y nariz con una mascara.</string>
+    <string name="stay_home_text">Quedate en casa y evita salir al menos que sea algo importante.</string>
+    <string name="sneeze_text">Cubre tu nariz y boca con el angulo interno del codo o un pañuelo cuando toses o estornudas.</string>
+    <string name="wash_your_hands_text">Lava tus manos seguido. usa jabon y agua o un higienizante a base de alcohol.</string>
+    <string name="social_distancing_text">Al estar en contacto con las personas manten una distancia segura siempre que sea posible.</string>
+    <string name="loved_ones_text">Mantente en contacto con tus seres queridos para que nadie se sienta solo en estos tiempos.</string>
+
+
+</resources>
