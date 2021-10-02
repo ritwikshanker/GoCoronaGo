@@ -80,7 +80,7 @@ class MainFragment : BaseFragment<MainFragmentBinding>(), AdapterView.OnItemSele
                 onGetCovidSummarySuccess(requestResult)
             }
             is RequestResult.Error -> {
-                viewModel.getCovidSummaryData()
+//                viewModel.getCovidSummaryData()
             }
         }
 
