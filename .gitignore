@@ -19,6 +19,7 @@ local.properties
 .gradle
 /.idea/workspace.xml
 /.idea/libraries
+.idea/.name
 .idea/caches/
 .idea/codeStyles/codeStyleConfig.xml
 .DS_Store
