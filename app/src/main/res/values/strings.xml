@@ -5,4 +5,6 @@
     <string name="gocoronago">GoCoronaGo</string>
     <string name="version">Version</string>
     <string name="contributors">Contributors</string>
+    <string name="retry_button_text">Retry</string>
+    <string name="error_msg">Oops! Something Went Wrong :(</string>
 </resources>
