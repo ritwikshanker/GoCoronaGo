@@ -1,4 +1,4 @@
-package com.example.gocoronago.HomePage
+package com.example.gocoronago.homepage
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName

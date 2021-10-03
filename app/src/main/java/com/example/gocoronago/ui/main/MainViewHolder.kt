@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gocoronago.HomePage.CountriesItem
+import com.example.gocoronago.homepage.CountriesItem
 import com.example.gocoronago.R
 import com.example.gocoronago.databinding.MainFragmentBinding
 

@@ -27,7 +27,7 @@ class StayHomeActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        overridePendingTransition(R.anim.fragment_fade_enter, R.anim.fragment_fade_exit)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
 //        setContentView(R.layout.main_fragment)
     }
 

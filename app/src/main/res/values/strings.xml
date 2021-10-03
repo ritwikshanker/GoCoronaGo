@@ -1,10 +1,42 @@
 <resources>
+
+    <!-- Main -->
     <string name="app_name">Worldwide Corona Tracker</string>
     <string name="action_search">Search</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+
+    <string name="total_cases_worldwide">Total Cases Worldwide</string>
+    <string name="total_cured_worldwide">Total Cured Worldwide</string>
+    <string name="total_deaths_worldwide">Total Deaths Worldwide</string>
+
+    <string name="total_confirmed">Total Confirmed Cases\n%d</string>
+    <string name="total_cured">Total Cured Cases\n%d</string>
+    <string name="total_deaths">Total Deaths\n%d</string>
+    <string name="worldwide">Worldwide</string>
+    <string name="select_country">Select Country</string>
+    <string name="nothing_selected">Nothing Selected</string>
+    <string name="item_selected_1">Spinner 2 Position: %d and language: %s</string>
+    <string name="country_selected">Country Selected: %s</string>
+
+    <!-- AboutFragment -->
     <string name="about_us">About Us</string>
     <string name="gocoronago">GoCoronaGo</string>
     <string name="version">Version</string>
     <string name="contributors">Contributors</string>
+
     <string name="retry_button_text">Retry</string>
     <string name="error_msg">Oops! Something Went Wrong :(</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">Stay Home Tips</string>
+    <string name="wear_mask_text">Cover mouth and nose with mask.</string>
+    <string name="stay_home_text">Stay Home and avoid going out unless it is very important.</string>
+    <string name="sneeze_text">Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</string>
+    <string name="wash_your_hands_text">Clean your hands often. Use soap and water, or an alcohol-based hand rub.</string>
+    <string name="social_distancing_text">Keep a safe distance from people whenever possible.</string>
+    <string name="loved_ones_text">Stay in touch with your loved ones so that no one feels alone in these tough times.</string>
+
+
 </resources>
