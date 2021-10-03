@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".stayHome.StayHomeActivity"
+            android:name=".tipspage.StayHomeActivity"
             android:screenOrientation="portrait" />
 
     </application>

@@ -1,6 +1,5 @@
 package com.example.gocoronago.ui.main
 
-import android.content.Intent
 import android.view.Gravity
 import android.view.View
 import android.widget.AdapterView
@@ -10,13 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
-import com.example.gocoronago.homepage.Summary
 import com.example.gocoronago.MainActivity
 import com.example.gocoronago.R
 import com.example.gocoronago.base.BaseFragment
 import com.example.gocoronago.base.RequestResult
 import com.example.gocoronago.databinding.MainFragmentBinding
-import com.example.gocoronago.stayHome.StayHomeActivity
+import com.example.gocoronago.homepage.Summary
+import com.google.accompanist.pager.ExperimentalPagerApi
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlinx.android.synthetic.main.stay_home.*
 import kotlinx.android.synthetic.main.total_cases.*
@@ -53,8 +52,7 @@ class MainFragment : BaseFragment<MainFragmentBinding>(), AdapterView.OnItemSele
 
     private fun initClickListeners() {
         stay_home_ll.setOnClickListener {
-            val intent = Intent(context, StayHomeActivity::class.java)
-            startActivity(intent)
+            TODO()
         }
     }
 
