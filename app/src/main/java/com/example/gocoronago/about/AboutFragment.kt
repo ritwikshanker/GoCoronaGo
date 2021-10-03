@@ -25,7 +25,8 @@ class AboutFragment : Fragment() {
         Contributor("Sunny", "🇮🇳"),
         Contributor("M. Asrof Bayhaqqi", "🇮🇩"),
         Contributor("Jacob", "\uD83C\uDDF7\uD83C\uDDFA"),
-        Contributor("Matthew Scibilia", "\uD83C\uDDE6\uD83C\uDDFA")
+        Contributor("Matthew Scibilia", "\uD83C\uDDE6\uD83C\uDDFA"),
+        Contributor("Akshai Baruah", "🇮🇳")
     )
 
     override fun onCreateView(
