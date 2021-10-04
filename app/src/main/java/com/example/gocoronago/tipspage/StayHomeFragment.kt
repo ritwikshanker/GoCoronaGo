@@ -1,22 +1,20 @@
-package com.example.gocoronago.about
+package com.example.gocoronago.tipspage
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.DialogFragment
 import com.example.gocoronago.MainActivity
 import com.example.gocoronago.R
-import com.example.gocoronago.about.ui.AboutUsScreen
+import com.example.gocoronago.tipspage.ui.TipsPage
+import com.example.gocoronago.ui.theme.AppTheme
 import com.google.accompanist.pager.ExperimentalPagerApi
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
-class AboutFragment : Fragment() {
-
+@ExperimentalPagerApi
+class StayHomeFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,16 +23,11 @@ class AboutFragment : Fragment() {
 
     private fun setupNavBar() {
         (activity as? MainActivity)?.apply {
-            title = getString(R.string.about_us)
+            title = getString(R.string.stay_home_tips)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             supportActionBar?.setHomeButtonEnabled(true)
         }
         setHasOptionsMenu(true)
-    }
-
-    override fun onPrepareOptionsMenu(menu: Menu) {
-        menu.findItem(R.id.about_us)?.isVisible = false
-        super.onPrepareOptionsMenu(menu)
     }
 
     override fun onCreateView(
@@ -47,12 +40,14 @@ class AboutFragment : Fragment() {
         )
 
         setContent {
-            AboutUsScreen()
+            AppTheme {
+                TipsPage()
+            }
         }
     }
 
 
     companion object {
-        fun newInstance() = AboutFragment()
+        fun newInstance() = StayHomeFragment()
     }
 }
