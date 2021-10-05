@@ -1,6 +1,6 @@
 # GoCoronaGo
 
-![GitHub release](https://img.shields.io/github/v/release/ritwikshanker/gocoronago)\
+![GitHub release](https://img.shields.io/badge/release-v4.1-blue)\
 \
 [Download](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.1/GoCoronaGo.apk)
 
