@@ -12,6 +12,10 @@ android {
     buildFeatures {
         dataBinding = true
     }
+
+    lintOptions {
+        abortOnError false
+    }
     defaultConfig {
         applicationId "com.gocoronago.tracker"
         minSdkVersion 19
