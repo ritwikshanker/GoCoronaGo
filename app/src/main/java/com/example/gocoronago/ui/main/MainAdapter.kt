@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gocoronago.HomePage.CountriesItem
+import com.example.gocoronago.homepage.CountriesItem
 
 class MainAdapter(val context: Context) :
     ListAdapter<Any, RecyclerView.ViewHolder>(MoviesDiffCallback(context)) {
