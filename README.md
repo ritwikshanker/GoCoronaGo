@@ -2,7 +2,7 @@
 
 ![GitHub release](https://img.shields.io/github/v/release/ritwikshanker/gocoronago)\
 \
-[Download](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.0/GoCoronaGo.apk)
+[Download](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.1/GoCoronaGo.apk)
 
 We provide some amazing functionalities like -
 
