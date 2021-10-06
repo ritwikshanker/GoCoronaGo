@@ -8,14 +8,16 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.fragment.app.Fragment
 import com.example.gocoronago.about.AboutFragment
-import com.example.gocoronago.ui.main.MainFragment
+import com.example.gocoronago.preferences.PreferencesFragment
 import com.github.angads25.toggle.widget.LabeledSwitch
 import dagger.hilt.android.AndroidEntryPoint
 
 private var darkMode = true
 
+@ExperimentalAnimationApi
 @AndroidEntryPoint
 open class MainActivity : AppCompatActivity() {
 
@@ -25,7 +27,7 @@ open class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
+                .replace(R.id.container, PreferencesFragment.newInstance()) //todo: revert when done
                 .commitNow()
 
         }

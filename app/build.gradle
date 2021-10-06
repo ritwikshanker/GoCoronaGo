@@ -85,6 +85,9 @@ dependencies {
     // Pager
     implementation "com.google.accompanist:accompanist-pager:$pager_version"
 
+    // DataStore
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
     //Flipper
     debugImplementation 'com.facebook.flipper:flipper:0.113.0'
     debugImplementation 'com.facebook.soloader:soloader:0.10.1'
