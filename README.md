@@ -6,28 +6,28 @@
 
 # **Features :** 
 
-### ***Beautiful Clean UI with no advertisements.***
+### ☑️  ***Beautiful Clean UI with no advertisements.***
 
-### ***Animations for better understanding.***
+### ☑️ ***Animations for better understanding.***
 
-### ***Open Source Code.***
+### ☑️ ***Open Source Code.***
 
-### ***Large amount of data for different countries.***
+### ☑️ ***Large amount of data for different countries.***
 
-### ***Updated at regular intervals.***
+### ☑️ ***Updated at regular intervals.***
 
-### ***No permissions Required. We don't collect any User data.***
+### ☑️ ***No permissions Required. We don't collect any User data.***
 
-### ***Minimal App Size***
+### ☑️ ***Minimal App Size***
 
-### ***Support for small screen Devices***
+### ☑️ ***Support for small screen Devices***
 
-### ***Dark Theme*** 
+### ☑️ ***Dark Theme*** 
 
 ***
-#### demo gif : 
+### Demo GIF : 
 
-<img src="demo/demo.gif" width="300" height="550"/>
+<img src="demo/demo.gif" width="400" height="600"/>
 
 ***
 
@@ -36,7 +36,7 @@
 - Graphs for better Visualisation
 - More Personalisation Option 
 
-# Contributing : 
+# **Contributing** : 
 
     Fork the repo.
     Create a new branch named <your_feature>
