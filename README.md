@@ -1,46 +1,48 @@
 # GoCoronaGo
 
-# ![GitHub release](https://img.shields.io/badge/release-v4.1-blue)
+![GitHub release](https://img.shields.io/badge/release-v4.2.0-blue)
 
-# [Download APK](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.1/GoCoronaGo.apk)
+# Downloads
 
-# **Features :** 
+[![IzzyOnDroid release](demo/IzzyOnDroid.png)](https://apt.izzysoft.de/fdroid/index/apk/com.gocoronago.tracker)
 
-### ☑️  ***Beautiful Clean UI with no advertisements.***
+# [Direct Download Link](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.1/GoCoronaGo.apk)
 
-### ☑️ ***Animations for better understanding.***
+# **Features :**
 
-### ☑️ ***Open Source Code.***
+- Beautiful Clean UI with no advertisements.
 
-### ☑️ ***Large amount of data for different countries.***
+- Animations for better understanding.
 
-### ☑️ ***Updated at regular intervals.***
+- Open Source Code.
 
-### ☑️ ***No permissions Required. We don't collect any User data.***
+- Large amount of data for different countries.
 
-### ☑️ ***Minimal App Size***
+- Updated at regular intervals.
 
-### ☑️ ***Support for small screen Devices***
+- No permissions Required. We don't collect any User data.
 
-### ☑️ ***Dark Theme*** 
+- Minimal App Size
 
-***
-### Demo GIF : 
+- Support for small screen Devices
+
+- Dark Theme
+
+### Demo GIF :
 
 ![](demo/demo.gif)
-
-***
 
 # **Upcoming Features :**
 
 - Graphs for better Visualisation
-- More Personalisation Option 
+- More Insightful Data
+- UI Revamp
+- Multiple Localization Support
+- More Personalisation Option
 
-# **Contributing** : 
-
+# **Contributing** :
     Fork the repo.
     Create a new branch named <your_feature>
     Commit changes and make a PR.
     PRs are welcome.
-
 ### [Tap here to check contibution guidelines](CONTRIBUTING.md)
