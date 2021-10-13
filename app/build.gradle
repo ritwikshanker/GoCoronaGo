@@ -20,8 +20,8 @@ android {
         applicationId "com.gocoronago.tracker"
         minSdkVersion 19
         targetSdkVersion 31
-        versionCode 4
-        versionName "4.1"
+        versionCode 40200
+        versionName "4.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
