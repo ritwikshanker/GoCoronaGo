@@ -19,6 +19,7 @@ class AboutUsRepository @Inject constructor() : IAboutUsRepository {
     override fun getContributorList(): List<Contributor> {
         return listOf(
             Contributor("Ritwik Shanker", "🇮🇳", true),
+            Contributor("Hardik Sachan", "🇮🇳"),
             Contributor("Sunny", "🇮🇳"),
             Contributor("M. Asrof Bayhaqqi", "🇮🇩"),
             Contributor("Jacob", "\uD83C\uDDF7\uD83C\uDDFA"),

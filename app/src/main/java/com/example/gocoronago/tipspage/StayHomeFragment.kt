@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.DialogFragment
@@ -13,6 +14,7 @@ import com.example.gocoronago.tipspage.ui.TipsPage
 import com.example.gocoronago.ui.theme.AppTheme
 import com.google.accompanist.pager.ExperimentalPagerApi
 
+@ExperimentalAnimationApi
 @ExperimentalPagerApi
 class StayHomeFragment : DialogFragment() {
 

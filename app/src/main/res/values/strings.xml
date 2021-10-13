@@ -25,6 +25,10 @@
     <string name="version">Version</string>
     <string name="contributors">Contributors</string>
 
+    <!-- Preferences Fragment -->
+    <string name="prefs" translatable="false">Preferences</string>
+    <string name="language" translatable="false">Language</string>
+
     <!-- StayHomeFragment -->
     <string name="stay_home_tips">Stay Home Tips</string>
     <string name="wear_mask_text">Cover mouth and nose with mask.</string>

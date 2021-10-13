@@ -1,8 +1,7 @@
-package com.example.gocoronago.about
+package com.example.gocoronago.preferences
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -11,14 +10,13 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
 import com.example.gocoronago.MainActivity
 import com.example.gocoronago.R
-import com.example.gocoronago.about.ui.AboutUsScreen
-import com.google.accompanist.pager.ExperimentalPagerApi
+import com.example.gocoronago.preferences.ui.PreferencesPage
+import com.example.gocoronago.ui.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
-@ExperimentalAnimationApi
 @AndroidEntryPoint
-class AboutFragment : Fragment() {
-
+@ExperimentalAnimationApi
+class PreferencesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,11 +32,6 @@ class AboutFragment : Fragment() {
         setHasOptionsMenu(true)
     }
 
-    override fun onPrepareOptionsMenu(menu: Menu) {
-        menu.findItem(R.id.about_us)?.isVisible = false
-        super.onPrepareOptionsMenu(menu)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -49,12 +42,14 @@ class AboutFragment : Fragment() {
         )
 
         setContent {
-            AboutUsScreen()
+            AppTheme {
+                PreferencesPage()
+            }
         }
     }
 
 
     companion object {
-        fun newInstance() = AboutFragment()
+        fun newInstance() = PreferencesFragment()
     }
 }
