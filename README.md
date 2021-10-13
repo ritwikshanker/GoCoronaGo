@@ -6,7 +6,7 @@
 
 [![IzzyOnDroid release](demo/IzzyOnDroid.png)](https://apt.izzysoft.de/fdroid/index/apk/com.gocoronago.tracker)
 
-# [Direct Download Link](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.1/GoCoronaGo.apk)
+# [Direct Download Link](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.2.0/app-release.apk)
 
 # **Features :**
 
@@ -45,4 +45,4 @@
     Create a new branch named <your_feature>
     Commit changes and make a PR.
     PRs are welcome.
-### [Tap here to check contibution guidelines](CONTRIBUTING.md)
+### [Tap here to check contribution guidelines](CONTRIBUTING.md)
