@@ -27,7 +27,7 @@
 ***
 ### Demo GIF : 
 
-<img src="demo/demo.gif" width="370" height="600"/>
+![](demo/demo.gif)
 
 ***
 
