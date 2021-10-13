@@ -1,36 +1,46 @@
 # GoCoronaGo
 
-![GitHub release](https://img.shields.io/badge/release-v4.1-blue)\
-\
-[Download](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.1/GoCoronaGo.apk)
+# ![GitHub release](https://img.shields.io/badge/release-v4.1-blue)
 
-We provide some amazing functionalities like -
+# [Download APK](https://github.com/ritwikshanker/GoCoronaGo/releases/download/v4.1/GoCoronaGo.apk)
 
-☑️  - A beautiful Clean UI with no advertisements.
+# **Features :** 
 
-☑️  - Animated Images for better understanding.
+### ☑️  ***Beautiful Clean UI with no advertisements.***
 
-☑️  - Open Source Code.
+### ☑️ ***Animations for better understanding.***
 
-☑️  - Large amount of data for many countries.
+### ☑️ ***Open Source Code.***
 
-☑️  - Updated at regular intervals.
+### ☑️ ***Large amount of data for different countries.***
 
-☑️  - No permissions Required. We don't collect any User data.
+### ☑️ ***Updated at regular intervals.***
 
-☑️  - Minimal App Size
+### ☑️ ***No permissions Required. We don't collect any User data.***
 
-☑️  - Support for small screen Devices
+### ☑️ ***Minimal App Size***
 
-☑️  - Dark Theme 
+### ☑️ ***Support for small screen Devices***
 
-☑️  - Developer Info Screen
+### ☑️ ***Dark Theme*** 
 
-**Upcoming Features -**
+***
+### Demo GIF : 
+
+![](demo/demo.gif)
+
+***
+
+# **Upcoming Features :**
 
 - Graphs for better Visualisation
 - More Personalisation Option 
 
+# **Contributing** : 
 
+    Fork the repo.
+    Create a new branch named <your_feature>
+    Commit changes and make a PR.
+    PRs are welcome.
 
-![](demo/demo.gif)
+### [Tap here to check contibution guidelines](CONTRIBUTING.md)
