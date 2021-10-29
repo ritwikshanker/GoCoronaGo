@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">दुनिया भर का कोरोना ट्रैकर</string>
+    <string name="action_search">खोज</string>
+    <string name="theme_dark">अंधेरा</string>
+    <string name="theme_light">रोशनी</string>
+
+    <string name="total_cases_worldwide">दुनिया भर में कुल मामले</string>
+    <string name="total_cured_worldwide">दुनिया भर में कुल इलाज</string>
+    <string name="total_deaths_worldwide">दुनिया भर में कुल मौतें</string>
+
+    <string name="total_confirmed">कुल पुष्टि मामले\n%d</string>
+    <string name="total_cured">कुल ठीक हुए मामले\n%d</string>
+    <string name="total_deaths">कुल मौतें\n%d</string>
+    <string name="worldwide">दुनिया भर</string>
+    <string name="select_country">देश चुनें</string>
+    <string name="nothing_selected">कुछ भी चयनित नहीं</string>
+    <string name="item_selected_1">स्पिनर 2 स्थिति: %d और भाषा: %s</string>
+    <string name="country_selected">देश चयनित: %s</string>
+
+    <!-- AboutFragment -->
+    <string name="about_us">हमारे बारे में</string>
+    <string name="gocoronago">जा कोरोना जा</string>
+    <string name="version">संस्करण</string>
+    <string name="contributors">योगदानकर्ताओं</string>
+
+    <string name="retry_button_text">पुन: प्रयास करें</string>
+    <string name="error_msg">उफ़! कुछ गलत हो गया :(</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">घर पर रहने के टिप्स</string>
+    <string name="wear_mask_text">मुंह और नाक को मास्क से ढकें।</string>
+    <string name="stay_home_text">घर पर रहें और जब तक बहुत जरूरी न हो बाहर जाने से बचें।</string>
+    <string name="sneeze_text">खांसते या छींकते समय अपनी नाक और मुंह को अपनी मुड़ी हुई कोहनी या टिशू से ढक लें।</string>
+    <string name="wash_your_hands_text">अपने हाथों को बार-बार साफ करें। साबुन और पानी, या अल्कोहल-आधारित हैंड रब का प्रयोग करें।</string>
+    <string name="social_distancing_text">जब भी संभव हो लोगों से सुरक्षित दूरी बनाए रखें।</string>
+    <string name="loved_ones_text">अपने प्रियजनों के संपर्क में रहें ताकि कोई भी इस कठिन समय में अकेला महसूस न करे।</string>
+
+
+</resources>
