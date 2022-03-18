@@ -13,9 +13,6 @@ android {
         dataBinding = true
     }
 
-    lintOptions {
-        abortOnError false
-    }
     defaultConfig {
         applicationId "com.gocoronago.tracker"
         minSdkVersion 19
@@ -34,6 +31,9 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    lint {
+        abortOnError false
     }
 }
 
