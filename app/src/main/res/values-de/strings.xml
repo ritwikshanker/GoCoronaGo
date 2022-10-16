@@ -1,2 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <!-- Main -->
+    <string name="app_name">Weltweiter Corona Tracker</string>
+    <string name="action_search">Suche</string>
+    <string name="theme_dark">Dunkel</string>
+    <string name="theme_light">Hell</string>
+
+    <string name="total_cases_worldwide">Total Cases Worldwide</string>
+    <string name="total_cured_worldwide">Gesamtheit der weltweit geheilten Fälle</string>
+    <string name="total_deaths_worldwide">Gesamtzahl der Todesfälle weltweit</string>
+
+    <string name="total_confirmed">Gesamtanzahl bestätigter Fälle</string>
+    <string name="total_cured">Gesamtanzahl der geheilten Fälle\n%d</string>
+    <string name="total_deaths">Gesamttodesfälle\n%d</string>
+    <string name="worldwide">Weltweit</string>
+    <string name="select_country">Land auswählen</string>
+    <string name="nothing_selected">Nichts ausgewählt</string>
+    <string name="item_selected_1">Spinner 2 Position: %d und Sprache: %s</string>
+    <string name="country_selected">Ausgewähltes Land: %s</string>
+
+    <!-- AboutFragment -->
+    <string name="about_us">Über uns</string>
+    <string name="gocoronago">GoCoronaGo</string>
+    <string name="version">Version</string>
+    <string name="contributors">Mitwirkende</string>
+
+    <string name="retry_button_text">Wiederholung</string>
+    <string name="error_msg">Oops! Etwas ist schief gelaufen :(</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">Zuhause bleiben Tipps</string>
+    <string name="wear_mask_text">Mund und Nase mit einer Maske bedecken.</string>
+    <string name="stay_home_text">Bleiben Sie zu Hause und gehen Sie nicht aus, wenn es nicht sehr wichtig ist.</string>
+    <string name="sneeze_text">Decken Sie Nase und Mund mit dem angewinkelten Ellbogen oder einem Taschentuch ab, wenn Sie husten oder niesen.</string>
+    <string name="wash_your_hands_text">Waschen Sie sich häufig die Hände. Verwenden Sie Wasser und Seife oder ein alkoholhaltiges Handreinigungsmittel.</string>
+    <string name="social_distancing_text">Halten Sie, wann immer möglich, einen sicheren Abstand zu anderen Menschen.</string>
+    <string name="loved_ones_text">Bleiben Sie in Kontakt mit Ihren Lieben, damit sich niemand in diesen schweren Zeiten allein fühlt.</string>
+
+
+</resources>
+
