@@ -1,2 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <br />- Principales -->
+    <string name="app_name">Suiveur de Corona mondial</string>
+    <string name="action_search">Recherche</string>
+    <string name="theme_dark">Foncé</string>
+    <string name="theme_light">Light</string>
+
+    <string name="total_cases_worldwide">Total Cases Worldwide</string>
+    <string name="total_cured_worldwide">Total Cured Worldwide</string>
+    <string name="total_deaths_worldwide">Total des décès dans le monde</string>
+
+    <string name="total_confirmed">Total des cas confirmés\n%d</string>
+    <string name="total_cured">Total des cas guéris\n%d</string> 
+  <string name="total_cured">Total des cas guéris\n%d</string>
+    <string name="total_deaths">Total des décès\n%d</string>
+    <string name="worldwide">Mondial</string>
+    <string name="select_country">Sélectionnez un pays</string>
+    <string name="nothing_selected">Non sélectionné</string>
+    <string name="item_selected_1">Spinner 2 Position : %d et langue : %s</string>
+    <string name="country_selected">Pays sélectionné : %s</string>
+
+    <!-- AboutFragment -->
+    <string name="about_us">A propos de nous</string>
+    <string name="gocoronago">GoCoronaGo</string>
+    <string name="version">Version</string>
+    <string name="contributors">Contributeurs</string>
+
+    <string name="retry_button_text">Retry</string>
+    <string name="error_msg">Oops ! Quelque chose s'est mal passé :(</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">Stay Home Tips</string>
+    <string name="wear_mask_text">Couvrir la bouche et le nez avec un masque.</string>
+    <string name="stay_home_text">Rester à la maison et éviter de sortir sauf si c'est très important.</string>
+    <string name="sneeze_text">Couvrez votre nez et votre bouche avec votre coude plié ou un mouchoir en papier lorsque vous toussez ou éternuez.</string>
+    <string name="wash_your_hands_text">Lavez-vous souvent les mains. Utilisez du savon et de l'eau, ou un produit de friction pour les mains à base d'alcool.</string>
+    <string name="social_distancing_text">Gardez une distance de sécurité avec les gens chaque fois que possible.</string>
+    <string name="loved_ones_text">Restez en contact avec vos proches afin que personne ne se sente seul dans ces moments difficiles.</string>
+
+
+</resources>
+
