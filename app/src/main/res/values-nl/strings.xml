@@ -1,2 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <!-- Main -->
+    <string name="app_name">Worldwide Corona Tracker</string>
+    <string name="action_search">Zoek</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+
+    <string name="total_cases_worldwide">Totaal aantal gevallen wereldwijd</string>
+    <string name="total_cured_worldwide">Totaal genezen wereldwijd</string>
+    <string name="total_deaths_worldwide">Totaal aantal sterfgevallen wereldwijd</string>
+
+    <string name="total_confirmed">Totaal bevestigde gevallen wereldwijd</string>
+    <string name="total_cured">Totaal genezen gevallenn%d</string>
+    <string name="total_deaths">Totaal aantal sterfgevallen</string>
+    <string name="worldwide">Worldwide</string>
+    <string name="select_country">Selecteer land</string>
+    <string name="nothing_selected">Niets geselecteerd</string>
+    <string name="item_selected_1">Spinner 2 Positie: %d en taal: %s</string>
+    <string name="country_selected">Land geselecteerd: %s</string>
+
+    <!-- OverFragment -->
+    <string name="about_us">Over ons</string>
+    <string name="gocoronago">GoCoronaGo</string>
+    <string name="version">Version</string>
+    <string name="contributors">Contributors</string>
+
+    <string name="retry_button_text">Retry</string>
+    <string name="error_msg">Oeps! Er is iets fout gegaan :(</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">Stay Home Tips</string>
+    <string name="wear_mask_text">Mond en neus bedekken met masker.</string>
+    <string name="stay_home_text">Blijf thuis en vermijd uitgaan tenzij het heel belangrijk is.</string>
+    <string name="sneeze_text">bedek je neus en mond met je gebogen elleboog of een tissue als je hoest of niest.</string>
+    <string name="wash_your_hands_text">Schoon uw handen vaak. Gebruik water en zeep of een handmelk op alcoholbasis.</string>
+    <string name="social_distancing_text">Blijf waar mogelijk op veilige afstand van mensen.</string>
+    <string name="loved_ones_text">Blijf in contact met je dierbaren zodat niemand zich alleen voelt in deze moeilijke tijden.</string>
+
+
+</resources>
+
