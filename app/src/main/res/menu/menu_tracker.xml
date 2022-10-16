@@ -12,4 +12,9 @@
         android:id="@+id/about_us"
         android:title="@string/about_us"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/change_language"
+        android:title="@string/change_language"
+        app:showAsAction="never" />
 </menu>
