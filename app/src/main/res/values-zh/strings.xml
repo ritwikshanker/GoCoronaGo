@@ -1,2 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <!-- 主-->
+    <string name="app_name">Worldwide Corona Tracker</string>
+    <string name="action_search">搜索</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+
+    <string name="total_cases_worldwide">Total Cases Worldwide</string>
+    <string name="total_cured_worldwide">世界范围内的治愈总数</string>
+    <string name="total_deaths_worldwide">世界范围内的死亡总数</string>
+
+    <string name="total_confirmed">Total Confirmed Cases\n%d</string>
+    <string name="total_cured">Total Cured Cases\n%d</string>
+    <string name="total_deaths">Total Deaths/n%d</string>
+    <string name="worldwide">Worldwide</string>
+    <string name="select_country">选择国家</string>
+    <string name="nothing_selected">没有选择</string>
+    <string name="item_selected_1">Spinner 2 Position: %d and language: %s</string>
+    <string name="country_selected">选择的国家: %s</string>
+
+    <!--AboutFragment -->
+    <string name="about_us">关于我们</string>
+    <string name="gocoronago">GoCoronaGo</string>
+    <string name="version">版本</string>
+    <string name="contributors">Contributors</string>
+
+    <string name="retry_button_text">重试</string>
+    <string name="error_msg">Oops! 出错了 :</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">呆在家里的提示</string>
+    <string name="wear_mask_text">用口罩遮住嘴巴和鼻子。</string>
+    <string name="stay_home_text">呆在家里，除非有非常重要的事情，否则不要外出。</string>
+    <string name="sneeze_text">当你咳嗽或打喷嚏时，用弯曲的肘部或纸巾遮住你的鼻子和嘴巴。</string>
+    <string name="wash_your_hands_text">经常清洁你的双手。使用肥皂和水，或使用以酒精为基础的擦手液。</string>
+    <string name="social_distancing_text">尽可能地与人保持安全距离。</string>
+    <string name="loved_ones_text">与你的亲人保持联系，这样就不会有人在这些艰难的时刻感到孤独。</string>
+
+
+</resources>
