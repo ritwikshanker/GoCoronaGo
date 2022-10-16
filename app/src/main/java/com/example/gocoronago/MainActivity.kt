@@ -10,8 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.gocoronago.about.AboutFragment
+import com.example.gocoronago.changeLanguage.ChangeLanguageFragment
 import com.example.gocoronago.ui.main.MainFragment
 import com.github.angads25.toggle.widget.LabeledSwitch
+import com.prongbang.localization.LocalizationAppCompatActivity
 
 private var darkMode = true
 
@@ -69,6 +71,10 @@ open class MainActivity : AppCompatActivity() {
             }
             android.R.id.home -> {
                 super.onBackPressed()
+                true
+            }
+            R.id.change_language -> {
+                goToFragment(ChangeLanguageFragment.newInstance())
                 true
             }
             else -> super.onOptionsItemSelected(item)
