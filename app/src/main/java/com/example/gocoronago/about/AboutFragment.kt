@@ -28,6 +28,7 @@ class AboutFragment : Fragment() {
         Contributor("Matthew Scibilia", "\uD83C\uDDE6\uD83C\uDDFA"),
         Contributor("MR Abdhi P", "🇮🇩"),
         Contributor("Akshai Baruah", "🇮🇳"),
+        Contributor("Ananya Shanker", "🇮🇳"),
     )
 
     override fun onCreateView(
