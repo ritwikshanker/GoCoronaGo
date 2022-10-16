@@ -7,7 +7,7 @@ object RetrofitInstance {
 
     fun createInstance(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.covid19api.com")
+            .baseUrl("https://disease.sh/v3/covid-19/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
