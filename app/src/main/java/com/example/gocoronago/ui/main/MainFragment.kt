@@ -5,6 +5,7 @@ import android.view.Gravity
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -74,16 +75,38 @@ class MainFragment : BaseFragment<MainFragmentBinding>(), AdapterView.OnItemSele
     private fun onGetCovidSummary(requestResult: RequestResult<Any?>) {
         when (requestResult) {
             is RequestResult.Loading -> {
-//                showLoading()
+                showLoading()
             }
             is RequestResult.Success -> {
                 onGetCovidSummarySuccess(requestResult)
+                progress_bar_api.visibility=View.GONE
+                error_img.visibility=View.GONE
+                error_txt.visibility=View.GONE
             }
             is RequestResult.Error -> {
-//                viewModel.getCovidSummaryData()
+               // viewModel.getCovidSummaryData()                 //was used earlier when loading was not implemented
+                retry_btn.visibility=View.VISIBLE
+                progress_bar_api.visibility=View.GONE
+                error_img.visibility=View.VISIBLE
+                error_txt.visibility=View.VISIBLE
+                retry_btn.setOnClickListener {
+                    retry()
+                }
             }
         }
 
+    }
+
+    private fun showLoading() {
+        progress_bar_api.visibility=View.VISIBLE
+        error_img.visibility=View.GONE
+        error_txt.visibility=View.GONE
+    }
+    private fun retry() {
+        error_txt.visibility=View.GONE
+        error_img.visibility=View.GONE
+        retry_btn.visibility=View.GONE
+        viewModel.getCovidSummaryData()
     }
 
     private fun onGetCovidSummarySuccess(response: RequestResult.Success<Any?>) {
@@ -244,4 +267,5 @@ class MainFragment : BaseFragment<MainFragmentBinding>(), AdapterView.OnItemSele
             supportActionBar?.setHomeButtonEnabled(false)
         }
     }
+
 }

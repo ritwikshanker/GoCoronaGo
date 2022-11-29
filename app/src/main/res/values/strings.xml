@@ -25,6 +25,10 @@
     <string name="version">Version</string>
     <string name="contributors">Contributors</string>
 
+    <string name="retry_button_text">Retry</string>
+    <string name="error_msg">Oops! Something Went Wrong :(</string>
+
+
     <!-- StayHomeFragment -->
     <string name="stay_home_tips">Stay Home Tips</string>
     <string name="wear_mask_text">Cover mouth and nose with mask.</string>
@@ -33,5 +37,6 @@
     <string name="wash_your_hands_text">Clean your hands often. Use soap and water, or an alcohol-based hand rub.</string>
     <string name="social_distancing_text">Keep a safe distance from people whenever possible.</string>
     <string name="loved_ones_text">Stay in touch with your loved ones so that no one feels alone in these tough times.</string>
+
 
 </resources>

@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Main -->
+    <string name="app_name">जगभरातील कोरोना ट्रॅकर</string>
+    <string name="action_search">शोधा</string>
+    <string name="theme_dark">गडद</string>
+    <string name="theme_light">तेज</string>
+
+    <string name="total_cases_worldwide">जगभरातील एकूण प्रकरणे</string>
+    <string name="total_cured_worldwide">जगभरात एकूण बरे</string>
+    <string name="total_deaths_worldwide">जगभरात एकूण मृत्यू</string>
+
+    <string name="total_confirmed">एकूण पुष्टी प्रकरणे\n%d</string>
+    <string name="total_cured">एकूण बरे झालेली प्रकरणे\n%d</string>
+    <string name="total_deaths">एकूण मृत्यू\n%d</string>
+    <string name="worldwide">जगभरात</string>
+    <string name="select_country">देश निवडा</string>
+    <string name="nothing_selected">काहीही निवडले नाही</string>
+    <string name="item_selected_1">स्पिनर 2 स्थान: %d आणि भाषा: %s</string>
+    <string name="country_selected">निवडलेला देश: %s</string>
+
+    <!-- AboutFragment -->
+    <string name="about_us">आमच्याबद्दल</string>
+    <string name="gocoronago">GoCoronaGo</string>
+    <string name="version">आवृत्ती</string>
+    <string name="contributors">योगदानकर्ते</string>
+
+    <string name="retry_button_text">पुन्हा प्रयत्न करा</string>
+    <string name="error_msg">अरेरे! काहीतरी चूक झाली :(</string>
+
+
+    <!-- StayHomeFragment -->
+    <string name="stay_home_tips">घरी राहण्याच्या टिप्स</string>
+    <string name="wear_mask_text">मास्कने तोंड आणि नाक झाका.</string>
+    <string name="stay_home_text">घरीच रहा आणि फार महत्वाचे असल्याशिवाय बाहेर जाणे टाळा.</string>
+    <string name="sneeze_text">खोकताना किंवा शिंकताना आपले नाक आणि तोंड आपल्या वाकलेल्या कोपराने किंवा टिश्यूने झाका.</string>
+    <string name="wash_your_hands_text">आपले हात वारंवार स्वच्छ करा. साबण आणि पाणी किंवा अल्कोहोल-आधारित हात घासणे वापरा.</string>
+    <string name="social_distancing_text">जेव्हा शक्य असेल तेव्हा लोकांपासून सुरक्षित अंतर ठेवा.</string>
+    <string name="loved_ones_text">आपल्या प्रियजनांच्या संपर्कात रहा जेणेकरून या कठीण काळात कोणालाही एकटे वाटू नये.</string>
+
+
+</resources>
